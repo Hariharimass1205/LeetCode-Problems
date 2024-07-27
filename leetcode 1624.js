@@ -5,7 +5,7 @@
 // Output: 2
 // Explanation: The optimal substring here is "bc".
 // Example 3:
-
+  
 // Input: s = "cbzxy"
 // Output: -1
 // Explanation: There are no characters that appear twice in s.
