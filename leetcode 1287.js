@@ -14,16 +14,32 @@
 // Output: 1
 
  let arr = [1,2,2,6,6,6,6,7,10]
-let percentage = (arr.length * 25) / 100
- console.log(percentage)
-    let count = 0
-    let obj  = {}
-    arr.forEach((element)=>{
-        obj[element] = (obj[element] || 0) + 1
-    })
-    console.log(Object.values(obj),obj)
-    for(let key in obj){
-       if(obj[key]>percentage){
-        console.log( key)
-       }
-    }
+
+// let percentage = (arr.length * 25) / 100
+//     console.log(percentage)
+//     let count = 0
+//     let obj  = {}
+//     arr.forEach((element)=>{
+//         obj[element] = (obj[element] || 0) + 1
+//     })
+//     console.log(Object.values(obj),obj)
+//     for(let key in obj){
+//        if(obj[key]>percentage){
+//         console.log( key)
+//        }
+//     }
+
+let unique = [...new Set(arr)]
+let ans = []
+for(let i=0;i<unique.length;i++){
+   let count =0
+   for(let j=0;j<arr.length;j++){
+      if(unique[i]==arr[j]){
+         count++
+      }
+   }
+   ans.push(count)
+}
+
+let large = Math.max(...ans)
+console.log(unique[ans.indexOf(large)])
