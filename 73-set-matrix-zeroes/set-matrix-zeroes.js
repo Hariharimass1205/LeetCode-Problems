@@ -15,8 +15,7 @@ var setZeroes = function(matrix) {
       }
    }
    
-   
-  for(h=0;h<matrix.length;h++){
+
       if(arr.length){
           for(c=0;c<arr.length;c++){
           for(s=0;s<matrix.length;s++){
@@ -24,6 +23,5 @@ var setZeroes = function(matrix) {
           }
           }
       }
- 
-    }
+
 };
